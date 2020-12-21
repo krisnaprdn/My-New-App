@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My New Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="header_title">Header</string>
+    <string name="homepagecontent1">Content 1</string>
+    <string name="homepagecontent2">Content 2</string>
+    <string name="homepagecontent3">Content 3</string>
+    <string name="btn_text">See Detail</string>
+    <string name="btn_detailpage">Add to Favorite</string>
+    <string name="title_content_list">TITLE</string>
+    <string name="desc_content_list">DESC</string>
+    <string name="detail_content_list">DETAIL</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+</resources>

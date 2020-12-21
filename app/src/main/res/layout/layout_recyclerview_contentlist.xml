@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:cardElevation="8dp">-->
+
+        <RelativeLayout
+            android:id="@+id/rl_contentlist1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_contentlist"
+                android:layout_width="80dp"
+                android:layout_height="100dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_contentlist2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/iv_contentlist">
+
+                <TextView
+                    android:id="@+id/tv_titlecontentlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/textview"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_desccontentlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/tv_titlecontentlist"
+                    android:text="@string/desc_content_list"
+                    android:textColor="@color/textview"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_detail_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/tv_desccontentlist">
+
+                    <TextView
+                        android:id="@+id/tv_detail_list1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/detail_content_list"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_list2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_content_list"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@id/tv_detail_list1"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_list3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@id/tv_detail_list2"
+                        android:text="@string/detail_content_list"
+                        android:textColor="@color/text_grey"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_detail_list">
+
+                    <Button
+                        android:id="@+id/btn_contentlist"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/button"
+                        android:text="@string/btn_text"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+</androidx.cardview.widget.CardView>
