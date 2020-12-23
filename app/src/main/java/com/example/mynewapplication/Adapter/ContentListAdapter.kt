@@ -1,17 +1,12 @@
 package com.example.mynewapplication.Adapter
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mynewapplication.MainActivity
-import com.example.mynewapplication.Model.ListModel
+import com.example.mynewapplication.KotlinModel.ListModel
 import com.example.mynewapplication.R
 
 class ContentListAdapter (private val data: ArrayList<ListModel>,

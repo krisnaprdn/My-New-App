@@ -15,7 +15,8 @@ class ContentDetailActivity : AppCompatActivity() {
 
         imageButton = findViewById(R.id.ib_back)
         imageButton.setOnClickListener {
-            startActivity(Intent(this, ContentListActivity::class.java))
+//            startActivity(Intent(this, ContentListActivity::class.java))
+            finish()
         }
     }
 }

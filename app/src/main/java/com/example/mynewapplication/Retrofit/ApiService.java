@@ -22,7 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiService {
 
     public static Retrofit retrofit;
-    private static String BASE_URL = "http://www.recipepuppy.com/api/";
+    private static String BASE_URL = "http://www.recipepuppy.com/";
+//    private static String BASE_URL = "https://api.punkapi.com/v2/";
 
     public static Retrofit getApiClient(Context context){
         if (retrofit == null){

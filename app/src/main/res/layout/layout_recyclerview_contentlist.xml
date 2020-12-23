@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="15dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="8dp"
@@ -37,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:textColor="@color/textview"
+                    tools:text="@string/title_content_list"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -45,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_below="@id/tv_titlecontentlist"
-                    android:text="@string/desc_content_list"
+                    tools:text="@string/desc_content_list"
                     android:textColor="@color/textview"/>
 
                 <RelativeLayout
@@ -60,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:text="@string/detail_content_list"
+                        tools:text="@string/detail_content_list"
                         android:textColor="@color/text_grey"
                         android:textSize="12sp"/>
 
@@ -68,7 +70,7 @@
                         android:id="@+id/tv_detail_list2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/detail_content_list"
+                        tools:text="@string/detail_content_list"
                         android:layout_marginEnd="8dp"
                         android:layout_toEndOf="@id/tv_detail_list1"
                         android:textColor="@color/text_grey"
@@ -80,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_toEndOf="@id/tv_detail_list2"
-                        android:text="@string/detail_content_list"
+                        tools:text="@string/detail_content_list"
                         android:textColor="@color/text_grey"
                         android:textSize="12sp"/>
 
@@ -99,7 +101,7 @@
                         android:clickable="true"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/button"
-                        android:text="@string/btn_text"
+                        tools:text="@string/btn_text"
                         android:textSize="10sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>

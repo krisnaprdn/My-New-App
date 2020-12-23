@@ -49,41 +49,55 @@
         </RelativeLayout>
 
 
-
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rv_homepagecontent1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_headerhomepage"
-        android:layout_marginBottom="10dp">
+        android:layout_below="@+id/rl_headerhomepage">
 
-        <include layout="@layout/fragment_homepage_item1"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_homepage_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginBottom="60dp"
+            android:clipToPadding="true"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rv_homepagecontent2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rv_homepagecontent1"
-        android:layout_marginBottom="10dp">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rv_homepagecontent1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rl_headerhomepage"-->
+<!--        android:layout_marginBottom="10dp">-->
 
-        <include layout="@layout/fragment_homepage_item2"/>
+<!--        <include layout="@layout/fragment_homepage_item1"/>-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rv_homepagecontent2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rv_homepagecontent1"-->
+<!--        android:layout_marginBottom="10dp">-->
+
+<!--        <include layout="@layout/fragment_homepage_item2"/>-->
+
+<!--    </RelativeLayout>-->
 
 
-    <RelativeLayout
-        android:id="@+id/rv_homepagecontent3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rv_homepagecontent2">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rv_homepagecontent3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rv_homepagecontent2">-->
 
-        <include layout="@layout/fragment_homepage_item3"/>
+<!--        <include layout="@layout/fragment_homepage_item3"/>-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/rl_bottom_menu"

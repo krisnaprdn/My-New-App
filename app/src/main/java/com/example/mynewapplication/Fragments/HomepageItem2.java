@@ -12,9 +12,11 @@ import android.view.ViewGroup;
 
 import com.example.mynewapplication.Adapter.MainAdapter;
 import com.example.mynewapplication.Model.MainModel;
+import com.example.mynewapplication.Model.Results;
 import com.example.mynewapplication.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomepageItem2 extends Fragment {
@@ -24,6 +26,7 @@ public class HomepageItem2 extends Fragment {
     private ArrayList<MainModel> list = new ArrayList<>();
     private MainModel mainModel;
     private RecyclerView recyclerView;
+    private List<Results> results = new ArrayList<>();
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -69,11 +72,11 @@ public class HomepageItem2 extends Fragment {
 
 
     public void initRecyclerView(){
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutManager);
-        mainAdapter = new MainAdapter(list, getActivity());
-        recyclerView.setAdapter(mainAdapter);
-        mainAdapter.notifyDataSetChanged();
+//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        mainAdapter = new MainAdapter(getActivity(), list);
+//        recyclerView.setAdapter(mainAdapter);
+//        mainAdapter.notifyDataSetChanged();
     }
 
     public void initData(){
