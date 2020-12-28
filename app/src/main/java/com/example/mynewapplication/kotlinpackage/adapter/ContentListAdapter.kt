@@ -1,4 +1,4 @@
-package com.example.mynewapplication.adapter
+package com.example.mynewapplication.kotlinpackage.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -49,20 +49,20 @@ class ContentListAdapter (private val data: ArrayList<ListModel>,
             imgView = itemView.findViewById(R.id.iv_contentlist)
             txtTitle = itemView.findViewById(R.id.tv_titlecontentlist)
             txtDesc = itemView.findViewById(R.id.tv_desccontentlist)
-            txtDetail1 = itemView.findViewById(R.id.tv_detail_list1)
-            txtDetail2 = itemView.findViewById(R.id.tv_detail_list2)
-            txtDetail3 = itemView.findViewById(R.id.tv_detail_list3)
-            btnContent = itemView.findViewById(R.id.btn_contentlist)
+//            txtDetail1 = itemView.findViewById(R.id.tv_detail_list1)
+//            txtDetail2 = itemView.findViewById(R.id.tv_detail_list2)
+//            txtDetail3 = itemView.findViewById(R.id.tv_detail_list3)
+//            btnContent = itemView.findViewById(R.id.btn_contentlist)
         }
 
         fun bind(data: ListModel){
             imgView?.setImageResource(data.imgView)
             txtTitle?.text = data.txtTitle
             txtDesc?.text = data.txtDesc
-            txtDetail1?.text = data.txtDetail1
-            txtDetail2?.text = data.txtDetail2
-            txtDetail3?.text = data.txtDetail3
-            btnContent?.text = data.btnContent
+//            txtDetail1?.text = data.txtDetail1
+//            txtDetail2?.text = data.txtDetail2
+//            txtDetail3?.text = data.txtDetail3
+//            btnContent?.text = data.btnContent
         }
     }
 

@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+    android:background="@color/text_grey"
+    tools:context=".javapackage.MainActivity">
 
     <RelativeLayout
         android:id="@+id/rl_headerhomepage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:elevation="20dp"
         android:padding="7dp">
 
@@ -52,52 +53,57 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_content_gotolist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_headerhomepage">
+
+        <RelativeLayout
+            android:id="@+id/content_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/homepagecontent"
+                android:textColor="@color/textview"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp">
+
+                <ImageButton
+                    android:id="@+id/ib_go_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    android:background="@color/text_grey"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_homepage_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/content_header"
             android:overScrollMode="never"
             android:layout_marginBottom="60dp"
-            android:clipToPadding="true"/>
+            android:clipToPadding="true"
+            tools:listitem="@layout/layout_recyclerview_homepagecontent"/>
 
     </RelativeLayout>
-
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/rv_homepagecontent1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/rl_headerhomepage"-->
-<!--        android:layout_marginBottom="10dp">-->
-
-<!--        <include layout="@layout/fragment_homepage_item1"/>-->
-
-<!--    </RelativeLayout>-->
-
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/rv_homepagecontent2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/rv_homepagecontent1"-->
-<!--        android:layout_marginBottom="10dp">-->
-
-<!--        <include layout="@layout/fragment_homepage_item2"/>-->
-
-<!--    </RelativeLayout>-->
-
-
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/rv_homepagecontent3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/rv_homepagecontent2">-->
-
-<!--        <include layout="@layout/fragment_homepage_item3"/>-->
-
-<!--    </RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/rl_bottom_menu"

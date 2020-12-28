@@ -1,4 +1,4 @@
-package com.example.mynewapplication.viewmodel;
+package com.example.mynewapplication.javapackage.viewmodel;
 
 import android.content.Context;
 

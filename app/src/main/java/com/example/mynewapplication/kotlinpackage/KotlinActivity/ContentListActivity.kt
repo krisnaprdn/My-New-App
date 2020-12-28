@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mynewapplication.adapter.ListAdapter
+import com.example.mynewapplication.kotlinpackage.adapter.ListAdapter
 import com.example.mynewapplication.R
 import com.example.mynewapplication.kotlinpackage.ApiServicesKotlin
 import com.google.gson.GsonBuilder

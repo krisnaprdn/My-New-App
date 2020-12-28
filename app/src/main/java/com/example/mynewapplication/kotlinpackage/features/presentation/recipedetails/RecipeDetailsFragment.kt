@@ -51,9 +51,9 @@ class RecipeDetailsFragment : BaseFragment() {
         wv_detail.webViewClient = object : WebViewClient() {
             override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                if (recipe_loader != null) {
-                    recipe_loader.gone()
-                }
+//                if (recipe_loader != null) {
+//                    recipe_loader.gone()
+//                }
             }
 
             override fun onPageFinished(view: WebView, url: String) {

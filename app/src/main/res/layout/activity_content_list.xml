@@ -59,7 +59,8 @@
         android:layout_below="@id/rl_header"
         android:overScrollMode="never"
         android:layout_marginBottom="60dp"
-        android:clipToPadding="true"/>
+        android:clipToPadding="true"
+        tools:listitem="@layout/layout_recyclerview_contentlist"/>
 
     <RelativeLayout
         android:id="@+id/rl_bottom_menu"

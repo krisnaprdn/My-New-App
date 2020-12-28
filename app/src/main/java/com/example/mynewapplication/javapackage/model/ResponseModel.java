@@ -1,10 +1,9 @@
-package com.example.mynewapplication.model;
+package com.example.mynewapplication.javapackage.model;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
-public class Response {
+public class ResponseModel {
 
     @SerializedName("results")
     private List<Results> results;

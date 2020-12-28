@@ -1,4 +1,4 @@
-package com.example.mynewapplication.fragments;
+package com.example.mynewapplication.javapackage.fragments;
 
 import android.os.Bundle;
 
@@ -10,16 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mynewapplication.kotlinpackage.MainAdapter;
-import com.example.mynewapplication.model.MainModel;
-import com.example.mynewapplication.model.Results;
+import com.example.mynewapplication.javapackage.adapter.MainAdapter;
+import com.example.mynewapplication.javapackage.model.MainModel;
+import com.example.mynewapplication.javapackage.model.Results;
 import com.example.mynewapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class HomepageItem2 extends Fragment {
+public class HomepageItem3 extends Fragment {
 
     private LinearLayoutManager layoutManager;
     private MainAdapter mainAdapter;
@@ -28,6 +27,7 @@ public class HomepageItem2 extends Fragment {
     private RecyclerView recyclerView;
     private List<Results> results = new ArrayList<>();
 
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -35,13 +35,12 @@ public class HomepageItem2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomepageItem2() {
+    public HomepageItem3() {
 
     }
 
-
-    public static HomepageItem2 newInstance(String param1, String param2) {
-        HomepageItem2 fragment = new HomepageItem2();
+    public static HomepageItem3 newInstance(String param1, String param2) {
+        HomepageItem3 fragment = new HomepageItem3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,16 +59,14 @@ public class HomepageItem2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_homepage_item2, container, false);
-        recyclerView = view.findViewById(R.id.rv_content2);
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_homepage_item3, container, false);
+        recyclerView = view.findViewById(R.id.rv_content3);
         recyclerView = (RecyclerView) getActivity().findViewById(R.id.rv_content3);
         initData();
         initRecyclerView();
         return view;
-
     }
-
 
     public void initRecyclerView(){
 //        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());

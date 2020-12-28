@@ -1,4 +1,4 @@
-package com.example.mynewapplication.kotlinpackage;
+package com.example.mynewapplication.javapackage.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.mynewapplication.kotlinpackage.KotlinActivity.ContentDetailActivity;
-import com.example.mynewapplication.model.Results;
+import com.example.mynewapplication.javapackage.ContentDetailActivity;
+import com.example.mynewapplication.javapackage.model.Results;
 import com.example.mynewapplication.R;
 
 import java.util.ArrayList;
@@ -42,17 +42,32 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
-//        holder.btn_homepagecontent.setText(dataList.get(position).getBtn_homepagecontent());
+
+        final Results model = dataList.get(position);
+
         holder.tv_title_homepage.setText(dataList.get(position).getTitle());
         holder.tv_desc_homepage.setText(dataList.get(position).getIngredients());
         holder.btn_homepagecontent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.getContext().startActivity(new Intent(v.getContext(), ContentDetailActivity.class));
+                Intent i = new Intent(holder.itemView.getContext(), ContentDetailActivity.class);
+                i.putExtra("href", model.getHref());
+                holder.itemView.getContext().startActivity(i);
             }
         });
 
-        Glide.with(context).load(dataList.get(position).getThumbnail()).into(holder.iv_homepagecontent);
+        Glide.with(context)
+                .load(dataList.get(position).getThumbnail())
+                .into(holder.iv_homepagecontent);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(holder.itemView.getContext(), ContentDetailActivity.class);
+                i.putExtra("href", model.getHref());
+                holder.itemView.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.mynewapplication.adapter
+package com.example.mynewapplication.kotlinpackage.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

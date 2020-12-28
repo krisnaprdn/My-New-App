@@ -1,4 +1,4 @@
-package com.example.mynewapplication.adapter
+package com.example.mynewapplication.kotlinpackage.adapter
 
 import android.content.Context
 import android.media.Image
@@ -18,10 +18,10 @@ class ListAdapter(val context: Context): RecyclerView.Adapter<ListAdapter.ListVi
 
         val tv_titlecontentlist: TextView = itemView.findViewById(R.id.tv_titlecontentlist)
         val tv_desccontentlist: TextView = itemView.findViewById(R.id.tv_desccontentlist)
-        val tv_detail_list1: TextView = itemView.findViewById(R.id.tv_detail_list1)
-        val tv_detail_list2: TextView = itemView.findViewById(R.id.tv_detail_list2)
-        val tv_detail_list3: TextView = itemView.findViewById(R.id.tv_detail_list3)
-        val iv_contentlist: Image = itemView.findViewById(R.id.iv_contentlist)
+//        val tv_detail_list1: TextView = itemView.findViewById(R.id.tv_detail_list1)
+//        val tv_detail_list2: TextView = itemView.findViewById(R.id.tv_detail_list2)
+//        val tv_detail_list3: TextView = itemView.findViewById(R.id.tv_detail_list3)
+//        val iv_contentlist: Image = itemView.findViewById(R.id.iv_contentlist)
 
         fun bind(result: Result){
             tv_titlecontentlist.text = result.title

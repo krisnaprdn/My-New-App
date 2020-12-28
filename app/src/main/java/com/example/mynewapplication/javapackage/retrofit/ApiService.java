@@ -1,4 +1,4 @@
-package com.example.mynewapplication.retrofit;
+package com.example.mynewapplication.javapackage.retrofit;
 
 
 import retrofit2.Retrofit;
@@ -23,7 +23,6 @@ public class ApiService {
 
     public static Retrofit retrofit;
     private static String BASE_URL = "http://www.recipepuppy.com/";
-//    private static String BASE_URL = "https://api.punkapi.com/v2/";
 
     public static Retrofit getApiClient(Context context){
         if (retrofit == null){

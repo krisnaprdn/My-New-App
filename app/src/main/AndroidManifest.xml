@@ -11,17 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".kotlinpackage.KotlinActivity.ContentDetailActivity"/>
+        <activity android:name=".javapackage.ContentDetailActivity"></activity>
+        <activity android:name=".javapackage.ContentListActivity" />
+        <activity android:name=".kotlinpackage.KotlinActivity.ContentDetailActivity" />
         <activity android:name=".kotlinpackage.KotlinActivity.ContentListActivity" />
         <activity android:name=".kotlinpackage.features.presentation.MainActivityKotlin">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".javapackage.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.mynewapplication.model;
+package com.example.mynewapplication.javapackage.model;
 
 public class MainModel {
 

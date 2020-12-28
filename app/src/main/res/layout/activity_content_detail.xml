@@ -6,15 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".kotlinpackage.KotlinActivity.ContentDetailActivity">
 
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="7dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp">
+
+            <ImageButton
+                android:id="@+id/ib_back_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow"
+                android:background="@color/white"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_title"
+                android:textColor="@color/textview"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:id="@+id/ib_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:background="@color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
     <WebView
         android:id="@+id/wv_detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <ProgressBar
-        android:id="@+id/recipe_loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"/>
 
 </RelativeLayout>

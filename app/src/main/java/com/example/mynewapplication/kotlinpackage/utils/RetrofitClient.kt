@@ -1,4 +1,4 @@
-package com.example.mynewapplication.utils
+package com.example.mynewapplication.kotlinpackage.utils
 
 import com.example.mynewapplication.kotlinpackage.ApiServicesKotlin
 import retrofit2.Retrofit
