@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    tools:context=".Fragments.HomepageItem1">
+    tools:context=".fragments.HomepageItem1">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,8 +1,7 @@
 package com.example.mynewapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,14 +11,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mynewapplication.Adapter.MainAdapter;
-import com.example.mynewapplication.Model.MainModel;
-import com.example.mynewapplication.Model.Results;
-import com.example.mynewapplication.ViewModel.MainActivityVM;
-import com.example.mynewapplication.ViewModel.MainActivityVMF;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.example.mynewapplication.kotlinpackage.MainAdapter;
+import com.example.mynewapplication.kotlinpackage.core.platform.BaseFragment;
+import com.example.mynewapplication.kotlinpackage.features.presentation.MainActivityKotlin;
+import com.example.mynewapplication.kotlinpackage.features.presentation.recipes.RecipesFragment;
+import com.example.mynewapplication.model.MainModel;
+import com.example.mynewapplication.model.Results;
+import com.example.mynewapplication.viewmodel.MainActivityVM;
+import com.example.mynewapplication.viewmodel.MainActivityVMF;
+import com.example.mynewapplication.kotlinpackage.KotlinActivity.ContentListActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,15 +58,15 @@ public class MainActivity extends AppCompatActivity {
         ib_list = findViewById(R.id.ib_list);
         recyclerView = findViewById(R.id.rv_homepage_content);
 
+
         ib_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContentListActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(MainActivity.this, MainActivityKotlin.class);
+                startActivity(i);
             }
         });
 
-//        initData();
         initLiveData();
         initRecyclerView(resultsData);
         viewModel.fetchRecipe(this);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(arrayRequest);
     }
-    
+
     public void initRecyclerView(List<Results> resultsData){
         layoutManager = new LinearLayoutManager(MainActivity.this, recyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
